@@ -10,7 +10,7 @@ The API supports four methods:
 
 1. Fetching a list of available chat rooms
 2. Sending a message to a room
-3. Fetching the chat history from a room
+3. Fetching the chat history from a room (recent messags by history by date)
 4. Showing the room details (who's in it etc.)
 
 Access to the API is managed by the inclusion of an `auth_token` with each request. The auth_tokens are managed from the HipChat admin panel, by the account holder.
@@ -20,7 +20,7 @@ The core use case for this library is to allow developers to include 'bots' in c
 1. Administer the 'bot' - which would involve selecting a room from a list of rooms, and entering the auth_token, and possibly a fixed "sender" id.
 2. Sending the messages.
 
-I have not, therefore, coded up the chat history or room details API methods.
+I have not, therefore, coded up the room details API method.
 
 ```c#
 
@@ -37,7 +37,6 @@ HipChatClient.SendMessage(auth_token, room_id, name_of_sender, "Hello World!");
 
 ##TODO
 1. Proper validation of message XHTML to ensure it won't be rejected by the API
-2. Add in history/show methods
 
 ##LICENSE
 (The MIT License)
